@@ -1,0 +1,5 @@
+/Users/github/saasmicroservice/cloud-framework/base-monitor/src/main/java/com/tenlnet/framework/monitor/service/NotifyService.java
+/Users/github/saasmicroservice/cloud-framework/base-monitor/src/main/java/com/tenlnet/framework/monitor/MonitorApplication.java
+/Users/github/saasmicroservice/cloud-framework/base-monitor/src/main/java/com/tenlnet/framework/monitor/config/WechatNotifyConfig.java
+/Users/github/saasmicroservice/cloud-framework/base-monitor/src/main/java/com/tenlnet/framework/monitor/notify/WechatNotifier.java
+/Users/github/saasmicroservice/cloud-framework/base-monitor/src/main/java/com/tenlnet/framework/monitor/service/impl/NotifyServiceImpl.java

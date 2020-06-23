@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8991
+
+turbine:
+  appConfig: catologapi,catologweb,catologwap
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

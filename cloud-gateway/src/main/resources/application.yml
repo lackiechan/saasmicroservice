@@ -1,0 +1,77 @@
+server:
+  port: 8015
+spring:
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #使用服务发现路由
+          lower-case-service-id: true #服务路由名小写
+      x-forwarded:
+        prefix-append: false
+        prefix-enabled: false
+      routes:
+        -   id: 任务管理
+            uri: lb://flyer-project-service-restapi
+            predicates:
+              - Path=/projecttask/**
+            filters:
+                - SwaggerHeaderFilter
+                - StripPrefix=1
+        -   id: 代码生成
+            uri: lb://generator
+            predicates:
+                 - Path=/devplatform/**
+            filters:
+                 - SwaggerHeaderFilter
+                 - StripPrefix=1
+        -   id: 用户组织
+            uri: lb://flyer-user-service
+            predicates:
+              - Path=/usergroup/**
+            filters:
+              - SwaggerHeaderFilter
+              - StripPrefix=1
+#            filters:
+#              - name: RequestRateLimiter
+#                args:
+#                  redis-rate-limiter.replenishRate: 10
+#                  redis-rate-limiter.burstCapacity: 20
+#                  key-resolver: "#{@userKeyResolver}"
+        -   id: 接口管理
+            uri: lb://flyer-api-service
+            predicates:
+              - Path=/apimgr/**
+            filters:
+              - SwaggerHeaderFilter
+              - StripPrefix=1
+
+  security:
+    user:
+      name: hm
+      password: hmpass
+    basic:
+      enabled: false
+
+auth:
+   tokenKey: token
+info:
+  app:
+    name: api-gateway
+    version: 1.0
+    author: lackiechan
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    sensitive: false
+  endpoint:
+    health:
+      show-details: always

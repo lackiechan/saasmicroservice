@@ -1,0 +1,7 @@
+com/tenlnet/framework/monitor/service/NotifyService.class
+com/tenlnet/framework/monitor/MonitorApplication$SecurityPermitAllConfig.class
+com/tenlnet/framework/monitor/MonitorApplication$SecuritySecureConfig.class
+com/tenlnet/framework/monitor/MonitorApplication.class
+com/tenlnet/framework/monitor/service/impl/NotifyServiceImpl.class
+com/tenlnet/framework/monitor/config/WechatNotifyConfig.class
+com/tenlnet/framework/monitor/notify/WechatNotifier.class

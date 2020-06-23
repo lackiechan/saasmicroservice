@@ -1,0 +1,20 @@
+spring:
+    redis:
+      host: 10.104.237.66
+      password: kingdeehit$2017
+      port: 6379
+    zipkin:
+      base-url: http://10.104.237.66:8991
+      sleuth:
+        sampler:
+          probability: 1.0
+nginx:
+  path: /hmgateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.104.237.66:8961/eureka/
+  instance:
+    #    hostname: 192.168.1.1
+    preferIpAddress: true

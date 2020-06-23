@@ -1,0 +1,29 @@
+spring:
+  security:
+    user:
+      name: hm
+      password: hmpass
+    basic:
+      enabled: false
+  zipkin:
+    enabled: false
+  datasource:
+      schema: classpath:/zipkin.sql
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://10.66.121.198:3306/cloud_dev_platform?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: kingdee@8349
+      initialize: true
+      continueOnError: true
+  sleuth:
+      enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.104.237.66:8961/eureka/
+    registry-fetch-interval-seconds: 10
+
+
+zipkin:
+  ui:
+    basepath: /hmzipkin/zipkin

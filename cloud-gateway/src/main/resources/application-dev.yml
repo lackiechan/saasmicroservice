@@ -1,0 +1,20 @@
+spring:
+    redis:
+      host: localhost
+      password: yinxinli@2019
+      port: 6379
+    zipkin:
+      base-url: http://localhost:8991
+    sleuth:
+      sampler:
+        probability: 1.0
+nginx:
+  path:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8961/eureka/
+  instance:
+    #    hostname: 192.168.1.1
+    preferIpAddress: true

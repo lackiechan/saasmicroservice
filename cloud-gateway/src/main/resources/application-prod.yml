@@ -1,0 +1,20 @@
+spring:
+    redis:
+      host: crs-interhospital.kdmcloud.local
+      password: 9dacc9a3-5bc3-4c7c-9ef9-7ecc8f74ad0c:kingdee@8349
+      port: 6379
+    zipkin:
+      base-url: http://localhost:8991
+    sleuth:
+      sampler:
+        probability: 1.0
+nginx:
+  path: /hmgateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8961/eureka/
+  instance:
+    hostname: cvm-mydoctor1.kdmcloud.local
+    preferIpAddress: true

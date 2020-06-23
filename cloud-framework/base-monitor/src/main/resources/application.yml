@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8963
+  servlet:
+    context-path: /
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+
+info:
+  app:
+    name: monitor
+    version: 1.0
+    author: lackiechan
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    sensitive: false
+  endpoint:
+    health:
+      show-details: always
+

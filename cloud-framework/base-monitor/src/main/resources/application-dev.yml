@@ -1,0 +1,27 @@
+spring:
+  security:
+    user:
+      name: hm
+      password: hmpass
+    basic:
+      enabled: false
+  boot:
+    admin:
+      ui:
+        title: 监控中心
+      context-path: /
+eureka:
+  instance:
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    leaseRenewalIntervalInSeconds: 10
+    non-secure-port: ${PORT:8963}
+    metadata-map:
+      user.name: hm
+      user.password: hmpass
+    home-page-url: ${server.servlet.context-path}
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8961/eureka/
+    registry-fetch-interval-seconds: 10
