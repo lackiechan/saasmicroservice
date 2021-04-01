@@ -37,7 +37,7 @@
         <springfox.swagger2.version>2.9.2</springfox.swagger2.version>
         <springfox.swagger2.ui.version>2.9.2</springfox.swagger2.ui.version>
         <springfox.bean.validators.version>2.9.2</springfox.bean.validators.version>
-        <com.google.guava.version>28.0-jre</com.google.guava.version>
+        <com.google.guava.version>29.0-jre</com.google.guava.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.io.version>2.5</commons.io.version>
         <commons.configuration.version>1.10</commons.configuration.version>
