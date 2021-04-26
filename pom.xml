@@ -39,7 +39,7 @@
         <springfox.bean.validators.version>2.9.2</springfox.bean.validators.version>
         <com.google.guava.version>28.0-jre</com.google.guava.version>
         <commons.lang.version>2.6</commons.lang.version>
-        <commons.io.version>2.5</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <commons.configuration.version>1.10</commons.configuration.version>
         <commons.beanutils.version>1.9.3</commons.beanutils.version>
         <commons.codec.version>1.13</commons.codec.version>
